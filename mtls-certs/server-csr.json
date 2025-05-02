@@ -1,0 +1,24 @@
+{
+    "CN": "server.default.svc.cluster.local",
+    "hosts": [
+      "server",
+      "server.default",
+      "server.default.svc",
+      "server.default.svc.cluster.local",
+      "localhost",
+      "127.0.0.1"
+    ],
+    "key": {
+      "algo": "rsa",
+      "size": 2048
+    },
+    "names": [
+      {
+        "C": "IN",
+        "L": "Roorkee",
+        "O": "MyOrg",
+        "OU": "Server Unit"
+      }
+    ]
+  }
+  

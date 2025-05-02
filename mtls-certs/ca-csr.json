@@ -1,0 +1,16 @@
+{
+    "CN": "mtls-ca",
+    "key": {
+      "algo": "rsa",
+      "size": 2048
+    },
+    "names": [
+      {
+        "C": "IN",
+        "L": "Roorkee",
+        "O": "MyOrg",
+        "OU": "CA Unit"
+      }
+    ]
+  }
+  
