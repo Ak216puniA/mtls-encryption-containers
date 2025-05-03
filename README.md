@@ -125,85 +125,80 @@ Stored secrets can be verified by running `vault kv get secret/mtls​`
 
 To setup the project, the following dependencies need to be installed and configured:
 
-### 1. AWS CLI
+### Prerequisites
 
-**Prerequisites:**
 * AWS account
 * IAM user with programmatic access (Access Key ID & Secret)
 * Ubuntu / Mac / WSL / Cloud9 terminal
 
+### Installations
+
+**1. AWS CLI**
+
 **Installation (Linux):**
 
 ```bash
+# Installation (Linux)
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
-```
 
-**Configure:**
-
-To configure the AWS CLI run,
-
-```bash
+# Configure and provide,
+# * AWS Access Key ID
+# * AWS Secret Access Key
+# * Default region: `ap-south-1`
+# * Output format: `json`
 aws configure
 ```
 
-and, provide the following:
-
-* AWS Access Key ID
-* AWS Secret Access Key
-* Default region: `ap-south-1`
-* Output format: `json`
-
----
-
-### 2. kubectl
-
-**Installation (Linux):**
+**2. kubectl**
 
 ```bash
+# Installation (Linux)
 curl -LO "https://dl.k8s.io/release/$(curl -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
 ```
 
----
-
-### 3. eksctl
-
-**Installation (Linux):**
+**3. eksctl**
 
 ```bash
+# Installation (Linux)
 curl --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
 ```
 
----
-
-### 4. Istio CLI
-
-**Installation (Linux):**
+**4. Istio CLI**
 
 ```bash
+# Installation (Linux)
 curl -L https://istio.io/downloadIstio | sh -
 cd istio-*
 export PATH=$PWD/bin:$PATH
+```
+
+**5. cryptsetup**
+
+```bash
+# Installation (Linux)
+sudo apt update
+sudo apt install cryptsetup
 ```
 
 ## Testing and Results
 
 **Verifying mTLS and secure pod-to-pod communication:**
 
-![](results/image1.jpg?raw=true)
+![](results/image1.jpeg?raw=true)
 
-![](results/image2.jpg?raw=true)
+![](results/image2.jpeg?raw=true)
 
-![](results/image3.jpg?raw=true)
+![](results/image3.jpeg?raw=true)
 
 **Encrypted container using LUKS:**
 
-![](results/image4.jpg?raw=true)
+![](results/image4.jpeg?raw=true)
 
 **Encrypted data stored inside container image:**
 
-![](results/image5.jpg?raw=true)
+![](results/image5.jpeg?raw=true)
