@@ -135,8 +135,6 @@ To setup the project, the following dependencies need to be installed and config
 
 **1. AWS CLI**
 
-**Installation (Linux):**
-
 ```bash
 # Installation (Linux)
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
